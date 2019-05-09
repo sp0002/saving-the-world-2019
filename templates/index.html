@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="content">
+Hello! Welcome to MyMoney where we keep track of your school
+expenses.
+	<br><br>
+    Click on your subject combination:
+        <div class="links">
+            <a href="money?combi=pcme">PCME</a>
+            <a href="money?combi=pcpme1">PCPME1</a>
+            <a href="money?combi=pcpme2">PCPME2</a>
+		    <a href="money?combi=pcpmh1">PCPMH1</a>
+            <a href="money?combi=ccpme1">CCPME1</a>
+        </div>
+    <br>
+	{% if status=="err" %}
+	<div id="err-msg">Type in then name or put in the amount correctly!</div>
+	<br>
+	{% elif status=="good" %}
+	<div id="good-msg">Successfully updated!</div>
+	<br>
+	{% endif %}
+    <form method="post">
+		Add on:<br>
+        Subject:
+        <select name="subject">
+            <option value="Physics">Physics</option>
+            <option value="GP">General Paper</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Computing">Computing</option>
+            <option value="Math">Math</option>
+            <option value="H1 Econs">H1 Econs</option>
+            <option value="H2 Econs">H2 Econs</option>
+            <option value="H1 History">H1 History</option>
+			<option value="top-up">Top-Up</option>
+        </select>
+        <br>
+        Name of notes: <input type="text" name="Notes" value="{{ namein }}" placeholder="E.g. Topic 3: Dynamics">
+        <br>
+        Total amount: $<input type="text" name="Cost" value="{{ costin }}">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</p>
+{% endblock %}
+
+
+
+<!--
+<form>
+        <select name="subj combi">
+            <option disabled value ="">Subject Combination</option>
+            <option value="PCME">PCME</option>
+            <option value="PCPME1">PCPME1</option>
+            <option value="PCPME2">PCPME2</option>
+            <option value="PCPMH1">PCPMH1</option>
+        </select>
+        <input type="submit" value="Enter">
+</form>
+-->

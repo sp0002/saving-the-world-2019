@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+	<meta name="description" content="MyMoney">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMoney</title>
+	<link rel="stylesheet" text=text/css href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <h1 class="base"><a href="/">MyMoney</a></h1>
+	{% block content %}{% endblock %}
+</body>
+</html>

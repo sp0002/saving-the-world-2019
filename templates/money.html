@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if combi=="none" %}
+<p id="oops">No combi or no such combi selected!</p>
+{% else %}
+<p id="statement">Amount left for subject combination {{ combi }}: ${{ money }}.
+	{% if monl<=0 %}
+	<p id="not-enough">Warning! No or negative balance! Please top up!</p>
+	{% elif monl<=3 %}
+	<p id="low">Caution! Your balance is dangerously low!</p>
+	{% elif monl<=25 %}
+	<p id="enough">Your balance is enough... for now...</p>
+	{% else %}
+	<p id="really">Are you sure you need that much balance now?</p>
+	{% endif %}
+{% endif %}
+
+{% endblock %}

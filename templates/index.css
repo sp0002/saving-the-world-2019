@@ -1,0 +1,81 @@
+body{
+	margin: 0;
+	padding: 0;
+    background-color: #eae8e8;
+	overflow: auto;
+}
+
+.base{
+	background-color: #eae8e8;
+	align="center";
+	text-align: center;
+}
+
+.base a{
+	font-family: "Times New Roman";
+	font-size: 40px;
+	text-decoration: none;
+	color: rgb(0, 135, 0);
+}
+
+.base a:hover{
+	color: black;
+}
+
+.content{
+    font-family: "Arial";
+    font-size: 20px;
+	text-align: center;
+}
+
+.links{
+	background-color: rgba(130, 148, 130, 0.8);
+	text-align: center;
+}
+
+.links a{
+	color: rgb(0, 138, 0);
+
+	padding: 14px 16px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	border-left: 2px solid black;
+}
+
+.links a:hover{
+	color: black;
+}
+
+.links a:first-child{
+	border-left: 0;
+}
+
+form{
+    font-family: "Times New Roman";
+    font-size: 22px;
+	text-align: center;
+}
+
+#err-msg, #good-msg, #oops, #statement, #enough{
+	font-size: 20px;
+	text-align: center;
+}
+
+#not-enough{
+	font-size: 24px;
+	text-align: center;
+	color: red;
+}
+
+#low{
+	font-size: 22px;
+	text-align: center;
+	color: orange;
+}
+
+#really{
+	font-size: 18px;
+	text-align: center;
+	color: blue;
+}
